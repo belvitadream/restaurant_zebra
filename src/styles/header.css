@@ -1,0 +1,111 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  background-image: url(../assets/Bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 750px;
+  width: 100vw;
+}
+
+.logo a {
+  width: 209px;
+  height: 43px;
+  font-size: 36px;
+  font-weight: 400;
+  font-family: 'Yeseva One';
+  text-align: center;
+  transition: color 0.2s;
+}
+
+.logo a:hover {
+  color: #cc9900;
+}
+
+.navigation {
+  height: 110px;
+  display: flex;
+  justify-content: space-evenly;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0));
+  background-size: cover;
+  align-items: center;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: fixed;
+  top: 0;
+  height: 110px;
+  display: flex;
+  justify-content: space-evenly;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0));
+  background-size: cover;
+  align-items: center;
+  width: 100%;
+  opacity: 0.5;
+}
+
+.header_nav a {
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.header_nav a:hover {
+  opacity: 1;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.header_nav .active {
+  opacity: 1;
+  border-top: 2px solid white;
+}
+
+.social {
+  width: 150px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social a {
+  opacity: 0.5;
+  transition: all 0.2s;
+}
+
+.social a:hover {
+  opacity: 1;
+  transform: scale(1.5);
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
+}
+
+.promo-container {
+  display: flex;
+}
+
+.promo {
+  margin: 0 auto;
+  /* width: 972px; */
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.promo_buttons button {
+  font-family: 'Lato';
+  width: 228px;
+  height: 57px;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.promo_buttons .button_right {
+  margin-left: 30px;
+  background-color: rgba(255, 255, 255, 0.315);
+}

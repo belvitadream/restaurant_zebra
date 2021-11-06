@@ -1,0 +1,47 @@
+.reviews {
+  height: 758px;
+  background-image: url(../assets/review.png);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-areas: 'review';
+  align-content: center;
+  justify-content: center;
+}
+
+.review {
+  padding-top: 100px;
+  width: 770px;
+  height: 555px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.658);
+}
+
+.review h2 {
+  color: white;
+}
+
+.review .review_text {
+  margin: 0 70px;
+  font-size: 25px;
+  line-height: 45px;
+  color: #dde0df;
+  font-weight: 700;
+  font-family: 'Gentium';
+  position: relative;
+}
+
+.review_text::before {
+  content: '';
+  position: absolute;
+  height: 30px;
+  width: 38px;
+  background-image: url(../assets/sign.png);
+  background-size: cover;
+  margin: 0;
+  left: -38px;
+}
+
+.review .decoration::before {
+  background-image: url(../assets/DividerWhite.png);
+}

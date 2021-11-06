@@ -1,0 +1,80 @@
+/* Reservation */
+.reservation-container .inner {
+  padding: 100px 0px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.reservation-images {
+  width: 570px;
+  display: flex;
+  justify-content: space-between;
+}
+.reservation-images img {
+  width: 270px;
+  height: 508;
+}
+
+.reservation {
+  width: 430px;
+}
+
+.reservation p {
+  height: 90px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #4c4c4c;
+  font-weight: 400;
+  font-family: "Lato";
+  text-align: center;
+}
+
+.reservation-form form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  /* grid-template-rows: repeat(2, 1fr); */
+  grid-template-areas:
+    "name email"
+    "date party"
+    "button button";
+}
+
+.reservation-form .form_position label {
+  /* width: 76px; */
+  /* height: 17px; */
+  font-size: 14px;
+  color: #c9a131;
+  font-weight: 700;
+  font-family: "Open Sans";
+  padding-bottom: 10px;
+}
+
+.reservation-form .form_position {
+  display: flex;
+  flex-direction: column;
+}
+
+.reservation-form .form_position input {
+  /* width: 198px; */
+  /* height: 28px; */
+  font-size: 16px;
+  color: #7c7c7c;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Open Sans";
+}
+
+.reservation-form .button_submit {
+  border: none;
+  grid-area: button;
+  justify-self: center;
+  width: 198px;
+  height: 38px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #c9a131;
+  font-weight: 400;
+  font-family: "Open Sans";
+  text-align: center;
+}

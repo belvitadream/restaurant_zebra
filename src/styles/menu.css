@@ -1,0 +1,60 @@
+.menu-container .inner {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.menu {
+  display: grid;
+  grid-gap: 60px;
+}
+
+.price {
+  font-size: 21px;
+  color: #c89f2d;
+  font-weight: 400;
+  font-family: "Yeseva One";
+}
+
+.position {
+  padding: 0 10px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "name price"
+    "desc desc";
+}
+
+.position > h3 {
+  grid-area: name;
+}
+
+.position .price {
+  grid-area: price;
+}
+
+.position p {
+  grid-area: desc;
+  text-align: left;
+}
+
+.special {
+  border: 1px solid #cc9900;
+  position: relative;
+  margin-top: 23px;
+}
+
+.special::before {
+  text-align: center;
+  color: #ffffff;
+  height: 23px;
+  width: 70px;
+  position: absolute;
+  content: "Special";
+  background-color: #cc9900;
+  right: 0;
+  margin-top: -23px;
+  margin-right: -1px;
+}

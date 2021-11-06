@@ -1,0 +1,20 @@
+.about {
+  height: 710px;
+  display: flex;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(autofit, minmax(430px, 530px));
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.about .description {
+  width: 430px;
+  align-self: center;
+  justify-self: center;
+  display: grid;
+}
+
+.about .description > * {
+  text-align: center;
+  justify-self: center;
+}

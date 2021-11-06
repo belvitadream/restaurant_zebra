@@ -1,0 +1,136 @@
+@import url('header.css');
+@import url('about.css');
+@import url('ingredients.css');
+@import url('menu.css');
+@import url('review.css');
+@import url('reservations.css');
+@import url('footer.css');
+@import url('navbar.css');
+
+@font-face {
+  font-family: 'Gentium';
+  src: url(../assets/fonts/Gentium_Book_Basic/GentiumBookBasic-Regular.ttf);
+}
+@font-face {
+  font-family: 'Lato';
+  src: url(../assets/fonts/Lato/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Yeseva One';
+  src: url(../assets/fonts/Yeseva_One/YesevaOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url(../assets/fonts/Open_Sans/OpenSans-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  list-style: none;
+}
+
+.topBtn {
+  display: none;
+}
+
+.visible {
+  padding-top: 15px;
+  border: none;
+  color: #dde0df;
+  font-size: 40px;
+  display: inline;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  position: fixed;
+  top: 10;
+  right: 70px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(1, 1, 1, 0.432);
+  cursor: pointer;
+}
+
+main {
+  flex: 1;
+}
+/* 
+h1 {
+  font-family: 'Yeseva One';
+  text-align: center;
+  font-size: 90px;
+  line-height: 117px;
+  font-weight: 400;
+  color: #ffffff;
+  filter: drop-shadow(0.469px 0.883px 1px rgba(1, 1, 1, 0.64));
+  width: 970px;
+  height: 346px;
+} */
+
+/* h2 {
+  font-family: 'Yeseva One';
+  font-size: 36px;
+  line-height: 1;
+  color: #cc9900;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 20px;
+} */
+
+/* h3 {
+  font-family: 'Yeseva One';
+  font-size: 21px;
+  line-height: 45px;
+  color: #cc9900;
+} */
+
+/* p {
+  font-family: 'Lato';
+  font-size: 16px;
+  line-height: 40px;
+  color: #4c4c4c;
+  font-weight: 400;
+  text-align: center;
+} */
+
+.review p {
+  font-family: 'Gentium';
+  font-size: 20px;
+  line-height: 65px;
+  color: #dde0df;
+}
+
+footer {
+  background-color: #191919;
+  color: #ffffff;
+}
+
+.decoration {
+  position: relative;
+  padding-bottom: 35px;
+}
+
+.decoration::before {
+  content: '';
+  width: 247px;
+  height: 24px;
+  background: url(../assets/Divider.png);
+  position: absolute;
+  margin: 0 auto;
+  bottom: 0;
+  /* add the 50% left, and add half of the width of this decotration */
+  left: 50%;
+  margin-left: -123px;
+}
+
+.backround-pattern {
+  display: flex;
+  background-image: url(../assets/pattern.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
