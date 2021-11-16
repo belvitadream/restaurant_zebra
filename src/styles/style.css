@@ -1,136 +1,164 @@
-@import url('header.css');
-@import url('about.css');
-@import url('ingredients.css');
-@import url('menu.css');
-@import url('review.css');
-@import url('reservations.css');
-@import url('footer.css');
 @import url('navbar.css');
+@import url('about.css');
+@import url('footer.css');
+@import url('bookingForm.css');
+@import url('menu.css');
+@import url('events.css');
+@import url('event.css');
+@import url('../assets/fonts/font-awesome-4.7.0/css/font-awesome.css');
 
 @font-face {
   font-family: 'Gentium';
   src: url(../assets/fonts/Gentium_Book_Basic/GentiumBookBasic-Regular.ttf);
 }
-@font-face {
-  font-family: 'Lato';
-  src: url(../assets/fonts/Lato/Lato-Regular.ttf);
+
+:root {
+  --clr-orange-1: #fde0d8;
+  --clr-orange-2: #f78464;
+  --clr-orange-3: #f34616;
+  --clr-orange-4: #c2320a;
+  --clr-orange-5: #611905;
+
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: hsl(205, 78%, 60%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  --max-width: 1170px;
+  --fixed-width: 450px;
 }
 
-@font-face {
-  font-family: 'Yeseva One';
-  src: url(../assets/fonts/Yeseva_One/YesevaOne-Regular.ttf);
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url(../assets/fonts/Open_Sans/OpenSans-Regular.ttf);
-}
-
-* {
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
-  text-decoration: none;
-  outline: none;
-  list-style: none;
-}
-
-.topBtn {
-  display: none;
-}
-
-.visible {
-  padding-top: 15px;
+  box-sizing: border-box;
   border: none;
-  color: #dde0df;
-  font-size: 40px;
-  display: inline;
-  display: grid;
-  align-content: center;
-  justify-content: center;
-  position: fixed;
-  top: 10;
-  right: 70px;
-  width: 50px;
-  height: 50px;
-  background-color: rgba(1, 1, 1, 0.432);
-  cursor: pointer;
 }
 
-main {
-  flex: 1;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
 }
-/* 
+
+button {
+  background-color: transparent;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
 h1 {
-  font-family: 'Yeseva One';
-  text-align: center;
-  font-size: 90px;
-  line-height: 117px;
-  font-weight: 400;
-  color: #ffffff;
-  filter: drop-shadow(0.469px 0.883px 1px rgba(1, 1, 1, 0.64));
-  width: 970px;
-  height: 346px;
-} */
-
-/* h2 {
-  font-family: 'Yeseva One';
-  font-size: 36px;
-  line-height: 1;
-  color: #cc9900;
-  text-align: center;
-  margin-top: 0px;
-  margin-bottom: 20px;
-} */
-
-/* h3 {
-  font-family: 'Yeseva One';
-  font-size: 21px;
-  line-height: 45px;
-  color: #cc9900;
-} */
-
-/* p {
-  font-family: 'Lato';
-  font-size: 16px;
-  line-height: 40px;
-  color: #4c4c4c;
-  font-weight: 400;
-  text-align: center;
-} */
-
-.review p {
-  font-family: 'Gentium';
-  font-size: 20px;
-  line-height: 65px;
-  color: #dde0df;
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
 }
 
-footer {
-  background-color: #191919;
-  color: #ffffff;
+.container {
+  animation: appear 0.8s ease;
+}
+.container-appear-opacity {
+  animation: appear-opacity 0.8s ease;
 }
 
-.decoration {
-  position: relative;
-  padding-bottom: 35px;
+@keyframes appear {
+  0% {
+    transform: translateY(50px);
+    opacity: 80%;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
 }
 
-.decoration::before {
-  content: '';
-  width: 247px;
-  height: 24px;
-  background: url(../assets/Divider.png);
-  position: absolute;
-  margin: 0 auto;
-  bottom: 0;
-  /* add the 50% left, and add half of the width of this decotration */
-  left: 50%;
-  margin-left: -123px;
-}
-
-.backround-pattern {
-  display: flex;
-  background-image: url(../assets/pattern.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+@keyframes appear-opacity {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
