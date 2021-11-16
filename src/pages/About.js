@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import cook from '../assets/cook.svg'
 import dish from '../assets/food.jpg'

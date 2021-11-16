@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { events } from '../components/data'
-import Footer from './Footer'
 
 const BookingForm = ({
   stylesForm,
@@ -141,9 +139,11 @@ const BookingForm = ({
             value={reservation.event}
             onChange={handleChange}
           >
-            <option value='' selected disabled hidden></option>
+            <option value='' defaultValue disabled hidden></option>
             {list_events.map((el) => (
-              <option value={el}>{el}</option>
+              <option key={el} value={el}>
+                {el}
+              </option>
             ))}
           </select>
 

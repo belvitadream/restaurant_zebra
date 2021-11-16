@@ -1,9 +1,9 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { events } from '../components/data'
 
 const Events = () => {
-  const [hover, setHover] = useState(false)
+  // const [hover, setHover] = useState(false)
 
   return (
     <>

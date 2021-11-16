@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+// import { useRef } from 'react'
 import { food } from '../components/data'
 
 const Menu = () => {
@@ -16,13 +16,7 @@ const Menu = () => {
           <div className='container menu-container'>
             <div className='menu__list'>
               {list.map((section) => (
-                <a
-                  href={`#${section}`}
-                  // onClick={() => {
-                  //   scroll(section)
-                  // }}
-                  className='menu__list__section'
-                >
+                <a href={`#${section}`} className='menu__list__section'>
                   {section}
                 </a>
               ))}
