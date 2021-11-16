@@ -4,7 +4,7 @@ main {
   flex: 1;
 }
 
-section {
+.about-section {
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -88,6 +88,11 @@ section {
 .description > * {
   text-align: center;
   justify-self: center;
+}
+
+/* reviews */
+.reviews {
+  max-height: 600px;
 }
 
 @media screen and (max-width: 800px) {

@@ -25,7 +25,6 @@ const BookingForm = ({
     setEvents(list)
   }, [])
 
-  console.log(list_events)
   const handleChange = (e) => {
     const name = e.target.name
     const value = e.target.value

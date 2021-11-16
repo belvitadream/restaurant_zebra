@@ -1,0 +1,43 @@
+.reviews-container {
+  max-width: 600px;
+  margin: 0 auto;
+  transition: var(--transition);
+}
+
+.review {
+  background: var(--clr-white);
+  padding: 1.5rem 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.text {
+  margin: 50px;
+}
+
+.review:hover {
+  box-shadow: var(--dark-shadow);
+}
+
+.author {
+  margin: 1rem;
+}
+
+.buttons-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.buttons-container > * {
+  font-size: 0.8rem;
+}
+
+.prev-btn {
+  justify-self: end;
+}
+
+.next-btn {
+  justify-self: start;
+}

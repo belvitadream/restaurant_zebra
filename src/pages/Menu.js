@@ -7,16 +7,20 @@ const Menu = () => {
   // }
 
   return (
-    <>
-      <h1 className='menu__title'>MENU</h1>
+    <section>
+      <h1 className='menu__title title-styled'>MENU</h1>
       {food.map((meal) => {
         const list = Object.keys(meal).map((item) => item)
 
         return (
           <div className='container menu-container'>
             <div className='menu__list'>
-              {list.map((section) => (
-                <a href={`#${section}`} className='menu__list__section'>
+              {list.map((section, index) => (
+                <a
+                  key={index}
+                  href={`#${section}`}
+                  className='menu__list__section'
+                >
                   {section}
                 </a>
               ))}
@@ -42,7 +46,7 @@ const Menu = () => {
           </div>
         )
       })}
-    </>
+    </section>
   )
 }
 

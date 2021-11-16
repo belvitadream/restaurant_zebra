@@ -7,8 +7,8 @@ const Events = () => {
 
   return (
     <>
-      <div className='events-container'>
-        <h1 className='menu__title'>Upcoming events</h1>
+      <section className='events-container'>
+        <h1 className='events__title title-styled'>Upcoming events</h1>
         <div className='container events'>
           {events.map((event) => {
             return (
@@ -26,7 +26,7 @@ const Events = () => {
             )
           })}
         </div>
-      </div>
+      </section>
     </>
   )
 }

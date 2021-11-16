@@ -4,12 +4,13 @@ import dish from '../assets/food.jpg'
 import artichoke from '../assets/artichoke.jpg'
 import Footer from '../components/Footer'
 import BookingForm from '../components/BookingForm'
+import Review from './Review'
 
 const About = () => {
   return (
     <div className='container-appear-opacity'>
       <header className='promo-container'>
-        <section className='promo'>
+        <section className='about-section promo'>
           <h1>Fine Dining And Fine Experience</h1>
           <div className='promo_buttons'>
             <button>
@@ -34,7 +35,7 @@ const About = () => {
       />
 
       <main>
-        <section className='about'>
+        <section className='about-section about'>
           <div className='description'>
             <h2>Just the right food</h2>
             <p>
@@ -52,7 +53,7 @@ const About = () => {
           </div>
         </section>
 
-        <section className='about section-black'>
+        <section className='about-section about section-black'>
           <div className='image-container'>
             <img src={artichoke} alt='artichoke' className='image img-sq' />
           </div>
@@ -68,16 +69,9 @@ const About = () => {
           </div>
         </section>
 
-        <section className='about'>
-          <div className='reviews'>
-            <h2>Guest review SLIDER</h2>
-            <p>
-              Zebra's new and vegan restaurant, which provides its clients with
-              the most sophisticated design and healthy food. Combination of
-              natural and organic products with the professionalism and
-              originality of our chefs will bring smile and calmness to your
-              mind.
-            </p>
+        <section className='about-section reviews'>
+          <div className='container-appear-opacity reviews-container'>
+            <Review />
           </div>
         </section>
       </main>

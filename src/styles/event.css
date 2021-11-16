@@ -8,6 +8,14 @@
   margin: 0 auto;
   overflow: hidden;
   justify-content: space-evenly;
+  /* box-shadow: var(--light-shadow); */
+  transition: var(--transition);
+  border-radius: var(--radius);
+  margin-top: 50px;
+}
+
+.event-container:hover {
+  box-shadow: var(--dark-shadow);
 }
 
 .event__image-container img {

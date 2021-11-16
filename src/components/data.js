@@ -69,7 +69,7 @@ export const food = [
       {
         id: 2,
         name: 'coconut yogurt with berries, walnuts, and chia seeds',
-        price: 9,
+        price: 10,
       },
       {
         id: 3,
@@ -150,7 +150,7 @@ export const food = [
       {
         id: 17,
         name: 'Vegan Pumpkin Spice Latte',
-        price: 4,
+        price: 10,
       },
       {
         id: 18,
@@ -290,3 +290,27 @@ export const events = [
     long: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   },
 ]
+const reviews = [
+  {
+    id: 1,
+    name: 'susan smith',
+    text: 'Realy nice restaurant. Perfect food. Increadible chef. Delicious and healthy. Highly recommened!',
+  },
+  {
+    id: 2,
+    name: 'anna johnson',
+    text: 'Adore this place. Best restaurant to spend time with family and friends. Though I get here pretty often alone just to enjoy healthy food and interesting fusion of ingredients. You should definitely come and visit this place!!!',
+  },
+  {
+    id: 3,
+    name: 'peter jones',
+    text: 'Nice atmosphere. Beautiful service and client-oriented service. Especially recomment to try best Chocolate Cake With Sweet Potato Frosting. You will never find better one. ',
+  },
+  {
+    id: 4,
+    name: 'bill anderson',
+    text: 'I come here regularly just so I could try every position in the menu. This is impossible to miss. Bring your partner and whoever is not vegan, will become one!!',
+  },
+]
+
+export default reviews

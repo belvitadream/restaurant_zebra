@@ -21,7 +21,7 @@ const Event = ({ date, desc }) => {
   }, [id])
 
   return (
-    <div className='event-container container-appear-opacity'>
+    <section className='event-container container-appear-opacity'>
       <div className='event__desc-container'>
         <h2>{name}</h2>
         <h4>{details.desc}</h4>
@@ -37,7 +37,7 @@ const Event = ({ date, desc }) => {
         </div>
       </div>
       <div className='event__image-container'>{details.image}</div>
-    </div>
+    </section>
   )
 }
 

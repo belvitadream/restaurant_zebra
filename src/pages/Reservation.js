@@ -2,9 +2,9 @@ import BookingForm from '../components/BookingForm'
 
 function Reservation() {
   return (
-    <div>
+    <section>
       <BookingForm stylesForm='full-white' />
-    </div>
+    </section>
   )
 }
 
