@@ -1,0 +1,49 @@
+.loading_text {
+  margin: 0 auto;
+  width: 400px;
+  text-align: center;
+}
+
+.amount_container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+  font-weight: 700;
+  justify-self: flex-end;
+  /* margin: 0px 30px; */
+  /* border: 1px solid red; */
+}
+.delivery p {
+  margin-bottom: 0;
+}
+
+.delivery__item {
+  align-self: center;
+  /* border: 2px solid orange; */
+  min-height: 80px;
+  grid-template-columns: 40px 1fr 50px 50px;
+  margin-bottom: 10px;
+}
+
+.btn-inc,
+.btn-dec {
+  padding: 2px 4px;
+  transition: all 0.5s ease-in;
+}
+
+.btn-inc:hover,
+.btn-dec:hover {
+  /* color: var(--clr-orange-2); */
+  background-color: rgb(223, 223, 223);
+}
+
+.btn-add {
+  color: var(--clr-grey-5);
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.btn-add:hover {
+  color: black;
+}

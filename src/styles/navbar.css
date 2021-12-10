@@ -55,6 +55,7 @@ nav {
 .show-container {
   height: 10rem;
 }
+
 @media screen and (min-width: 800px) {
   .nav-center {
     max-width: 1170px;
@@ -99,5 +100,11 @@ nav {
   }
   .social-icons a:hover {
     color: var(--clr-orange-2);
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+  .links a {
+    margin: 0 0.5rem;
   }
 }
