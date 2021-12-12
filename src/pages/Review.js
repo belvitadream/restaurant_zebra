@@ -1,17 +1,30 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa'
 import reviews from '../components/data'
+import { db } from '../firebase'
 
-function Review() {
+const Review = () => {
+  const [reviewsDB, setReviewsDB] = useState([])
+
   const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    db.collection('reviews').onSnapshot((snapshot) => {
+      setReviewsDB(snapshot.docs.map((review) => review.data()))
+    })
+  }, [])
+
+  console.log(reviewsDB)
+  console.log(reviewsDB[0])
+
   const { name, text } = reviews[index]
 
   const validNumber = (number) => {
-    if (number > reviews.length - 1) {
+    if (number > reviewsDB.length - 1) {
       return (number = 0)
     }
     if (number < 0) {
-      return reviews.length - 1
+      return reviewsDB.length - 1
     }
 
     if (number === index) {
@@ -43,7 +56,7 @@ function Review() {
   }
 
   const generateRandom = () => {
-    return Math.floor(Math.random() * reviews.length)
+    return Math.floor(Math.random() * reviewsDB.length)
   }
 
   return (

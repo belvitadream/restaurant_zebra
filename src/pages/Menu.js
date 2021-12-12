@@ -13,7 +13,7 @@ const Menu = () => {
         const list = Object.keys(meal).map((item) => item)
 
         return (
-          <div className='container menu-container'>
+          <div className='container menu-container' key={meal}>
             <div className='menu__list'>
               {list.map((section, index) => (
                 <a

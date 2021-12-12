@@ -1,9 +1,19 @@
 // import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { events } from '../components/data'
+import { db } from '../firebase'
 
 const Events = () => {
   // const [hover, setHover] = useState(false)
+
+  // const [eventsDB, setEventsDB] = useState([])
+
+  // useEffect(() => {
+  //   db.collection('reviews').onSnapshot((snapshot) => {
+  //     setEventsDB(snapshot.docs.map((review) => review.data()))
+  //   })
+  // }, [])
 
   return (
     <>

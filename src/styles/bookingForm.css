@@ -31,7 +31,8 @@ select {
   background: var(--clr-grey-10);
   border-color: transparent;
   border-radius: var(--radius);
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 0.25rem;
+  /* padding: 0.5rem 0.5rem; */
 }
 .form-position {
   margin: 0.5rem 0;

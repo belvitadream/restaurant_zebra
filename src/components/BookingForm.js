@@ -18,7 +18,7 @@ const BookingForm = ({
     phone: '',
   })
   const [reservations, setReservations] = useState([])
-  const [formSubmitionStatus, setFormSubmitionStatus] = useState('submitted')
+  const [formSubmitionStatus, setFormSubmitionStatus] = useState('notSubmitted')
   const [list_events, setEvents] = useState([])
 
   useEffect(() => {
@@ -162,7 +162,7 @@ const BookingForm = ({
         >
           Book a table
         </button>
-      </form>{' '}
+      </form>
     </div>
   )
   return (

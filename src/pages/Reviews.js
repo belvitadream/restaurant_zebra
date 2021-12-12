@@ -1,4 +1,7 @@
+import { useEffect, useState } from 'react'
 import Review from './Review'
+
+import { db } from '../firebase'
 
 const Reviews = () => {
   return (
