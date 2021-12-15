@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { events } from '../components/data'
 import ThankYou from './ThankYou'
+import { db } from '../firebase'
 
 const BookingForm = ({
   stylesForm,
@@ -34,6 +35,7 @@ const BookingForm = ({
   }
   const handleSubmit = (e) => {
     e.preventDefault()
+
     if (
       reservation.date &&
       reservation.time &&
@@ -46,6 +48,18 @@ const BookingForm = ({
         ...reservation,
         id: new Date().getTime().toString(),
       }
+
+      // ADDING TO DATABASE
+      db.collection('reservations').add({
+        date: reservation.date,
+        time: reservation.time,
+        amount: reservation.amount,
+        name: reservation.name,
+        email: reservation.email,
+        phone: reservation.phone,
+        event: reservation.event,
+      })
+
       setReservations([...reservations, newReservation])
       setReservation({
         date: '',
@@ -56,6 +70,7 @@ const BookingForm = ({
         event: '',
         phone: '',
       })
+
       setFormSubmitionStatus('submitted')
     }
   }

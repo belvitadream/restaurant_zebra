@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import cook from '../assets/cook.svg'
+import chef from '../assets/chef.jpg'
 import dish from '../assets/food.jpg'
 import artichoke from '../assets/artichoke.jpg'
 import Footer from '../components/Footer'

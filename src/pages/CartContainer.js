@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import ThankYou from '../components/ThankYou'
-import CartItem from './CartItem'
+import CartItem from '../components/CartItem'
 import { useGlobalContext } from './context'
+import { db } from '../firebase'
 
 const CartContainer = () => {
   const { cart, total, clearCart, amount } = useGlobalContext()
@@ -9,9 +10,9 @@ const CartContainer = () => {
   const [formDelivery, setFormDelivery] = useState('notSubmitted')
   const [deliveries, setDeliveries] = useState([])
 
-  const submitOrder = () => {
-    setdeliveryStatus('submitted')
-  }
+  // const submitOrder = () => {
+  //   setdeliveryStatus('submitted')
+  // }
 
   const [delivery, setDelivery] = useState({
     name: '',
@@ -23,16 +24,27 @@ const CartContainer = () => {
   const handleChange = (e) => {
     const name = e.target.name
     const value = e.target.value
-    setDelivery({ ...delivery, [name]: value })
-    console.log(name, value)
+    setDelivery({ ...delivery, [name]: value, cart })
+    // console.log(name, value)
   }
+
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    // console.log(cart)
+    console.log(delivery)
+
     if (delivery.name && delivery.address && delivery.email && delivery.phone) {
       const newDelivery = {
         ...delivery,
         id: new Date().getTime().toString(),
       }
+
+      // ADDING TO DATABASE
+      db.collection('delivery').add({
+        ...delivery,
+      })
+
       setDeliveries([...deliveries, newDelivery])
       setDelivery({
         name: '',
@@ -41,6 +53,7 @@ const CartContainer = () => {
         phone: '',
       })
       setFormDelivery('submitted')
+      clearCart()
     }
   }
 
@@ -107,14 +120,9 @@ const CartContainer = () => {
     return <ThankYou text='Ordered successfully!' />
   }
 
-  if (deliveryStatus === 'submitted') {
-    return (
-      <>
-        <ThankYou text='Thank you for your order!' />
-        {formDelivery === 'notSubmitted' && deliveryFormDiv}
-      </>
-    )
-  }
+  // if (deliveryStatus === 'submitted') {
+  //   return <>{formDelivery === 'notSubmitted' && deliveryFormDiv}</>
+  // }
 
   if (cart.length === 0) {
     return (
@@ -137,7 +145,6 @@ const CartContainer = () => {
           </span>
         </h2>
       </header>
-
       <div>
         {cart.map((item) => {
           return <CartItem key={item.id} {...item} />
@@ -151,9 +158,11 @@ const CartContainer = () => {
         <button className='btn-clear-cart' onClick={clearCart}>
           clear cart
         </button>
-        <button className='btn btn-order' onClick={submitOrder}>
+
+        {deliveryFormDiv}
+        {/* <button className='btn btn-order' onClick={submitOrder}>
           Order
-        </button>
+        </button> */}
       </div>
     </section>
   )

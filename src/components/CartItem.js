@@ -1,5 +1,5 @@
 import React from 'react'
-import { useGlobalContext } from './context'
+import { useGlobalContext } from '../pages/context'
 
 const CartItem = ({ id, name, price, amount }) => {
   const { remove, increase, decrease } = useGlobalContext()

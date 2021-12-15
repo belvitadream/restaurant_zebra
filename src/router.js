@@ -13,6 +13,8 @@ import Delivery from './pages/Delivery'
 // navbar
 import Navbar from './components/Navbar'
 import Reservation from './pages/Reservation'
+import ListOfReservations from './pages/ListOfReservations'
+import ListofDelivery from './pages/ListOfDelivery'
 
 const ReactRouterSetup = () => {
   return (
@@ -34,6 +36,14 @@ const ReactRouterSetup = () => {
         <Route path='/delivery'>
           <Delivery />
         </Route>
+        <Route path='/listofreservations'>
+          <ListOfReservations />
+        </Route>
+
+        <Route path='/listofdelivery'>
+          <ListofDelivery />
+        </Route>
+
         {/* home / page should be the last one. cause matches everything. Or we can place "exact" word */}
         <Route exact path='/'>
           <About />
