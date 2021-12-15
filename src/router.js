@@ -15,6 +15,7 @@ import Navbar from './components/Navbar'
 import Reservation from './pages/Reservation'
 import ListOfReservations from './pages/ListOfReservations'
 import ListofDelivery from './pages/ListOfDelivery'
+import LoginPage from './components/LoginPage'
 
 const ReactRouterSetup = () => {
   return (
@@ -35,6 +36,10 @@ const ReactRouterSetup = () => {
         </Route>
         <Route path='/delivery'>
           <Delivery />
+        </Route>
+
+        <Route path='/loginpage'>
+          <LoginPage />
         </Route>
         <Route path='/listofreservations'>
           <ListOfReservations />

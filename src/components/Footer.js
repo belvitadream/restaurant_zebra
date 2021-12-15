@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { social } from './data'
 
 function Footer() {
@@ -34,6 +35,10 @@ function Footer() {
               )
             })}
           </ul>
+
+          <Link to='/loginpage'>
+            <p>Login as admin</p>
+          </Link>
         </div>
       </div>
     </footer>
