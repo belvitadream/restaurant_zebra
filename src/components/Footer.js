@@ -5,7 +5,7 @@ function Footer() {
     <footer>
       <div className='footer-container'>
         <div className='footer-about foot'>
-          <h4>About Us</h4>
+          <h4>About ZEBRA</h4>
           <p>We offer healthy and vegan food combined into unique dishes.</p>
           <p>Whole, organic and bio products will enrich the taste.</p>
           <p>Estetic design and mindfull armosphere.</p>

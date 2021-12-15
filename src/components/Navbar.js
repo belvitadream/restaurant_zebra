@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { FaBars } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import zebra from '../assets/Zebra.svg'
+// import zebra from '../assets/Zebra.svg'
+import zebra2 from '../assets/zebraFINAL.svg'
 import { links, social } from './data'
 
 const Navbar = () => {
@@ -24,7 +25,8 @@ const Navbar = () => {
         {/* logo */}
         <div className='nav-header'>
           <Link to='/'>
-            <img src={zebra} alt='logo' className='logo' />
+            {/* <img src={zebra} alt='logo' className='logo' /> */}
+            <img src={zebra2} alt='logo' className='logo' />
           </Link>
 
           <button

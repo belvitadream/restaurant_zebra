@@ -24,7 +24,7 @@ const CartContainer = () => {
   const handleChange = (e) => {
     const name = e.target.name
     const value = e.target.value
-    setDelivery({ ...delivery, [name]: value, cart })
+    setDelivery({ ...delivery, [name]: value, cart, total })
     // console.log(name, value)
   }
 

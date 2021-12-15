@@ -1,0 +1,21 @@
+.reservations-list {
+  display: flex;
+  gap: 50px;
+  margin: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  transition: var(--transition);
+}
+
+.cart_details {
+  display: grid;
+  grid-template-columns: 300px 70px 70px;
+  grid-template-areas:
+    'header header header'
+    'name amount price';
+}
+
+.cart_details > * {
+  padding: 5px;
+  border: 1px solid black;
+}

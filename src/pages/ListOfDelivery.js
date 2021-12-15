@@ -13,23 +13,28 @@ const ListofDelivery = () => {
 
   return (
     <section className='reservations-list'>
-      {list.map((res) => {
-        const { id, name, email, phone, cart } = res
+      {list.map((ele) => {
+        const { id, name, email, phone, cart, total } = ele
         return (
           <div className='reservations-item' key={id}>
             <h4>{name}</h4>
+            <h4>Total: ${total}.00</h4>
             <p>Phone: {phone}</p>
             <p>Email: {email}</p>
-
-            {cart.map((el) => {
-              return (
-                <div>
-                  <h5>{el.name}</h5>
-                  <p>{el.amount}</p>
-                  <p>{el.price}</p>
-                </div>
-              )
-            })}
+            <div className='cart_details'>
+              <h5>name</h5>
+              <h5>amount</h5>
+              <h5>price</h5>
+              {cart.map((el) => {
+                return (
+                  <>
+                    <p>{el.name}</p>
+                    <p>{el.amount}</p>
+                    <p>{el.price}</p>
+                  </>
+                )
+              })}
+            </div>
           </div>
         )
       })}

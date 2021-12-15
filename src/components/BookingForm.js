@@ -118,6 +118,7 @@ const BookingForm = ({
           <input
             required
             type='number'
+            min='0'
             id='amount'
             name='amount'
             value={reservation.amount}
