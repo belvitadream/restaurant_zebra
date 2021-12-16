@@ -1,5 +1,5 @@
 // import { useState } from 'react'
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { events } from '../components/data'
 import { db } from '../firebase'

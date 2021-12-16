@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import ThankYou from '../components/ThankYou'
 import CartItem from '../components/CartItem'
 import { useGlobalContext } from './context'
@@ -6,7 +6,7 @@ import { db } from '../firebase'
 
 const CartContainer = () => {
   const { cart, total, clearCart, amount } = useGlobalContext()
-  const [deliveryStatus, setdeliveryStatus] = useState('notSubmitted')
+  // const [deliveryStatus, setdeliveryStatus] = useState('notSubmitted')
   const [formDelivery, setFormDelivery] = useState('notSubmitted')
   const [deliveries, setDeliveries] = useState([])
 

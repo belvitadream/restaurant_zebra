@@ -14,8 +14,8 @@ const Review = () => {
     })
   }, [])
 
-  console.log(reviewsDB)
-  console.log(reviewsDB[0])
+  // console.log(reviewsDB)
+  // console.log(reviewsDB[0])
 
   const { name, text } = reviews[index]
 

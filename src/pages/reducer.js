@@ -1,5 +1,5 @@
-import { act } from 'react-dom/test-utils'
-import { cartItems } from '../components/data'
+// import { act } from 'react-dom/test-utils'
+// import { cartItems } from '../components/data'
 
 const reducer = (state, action) => {
   if (action.type === 'CLEAR_CART') {

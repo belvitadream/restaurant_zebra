@@ -97,7 +97,8 @@ main {
 
 @media screen and (max-width: 800px) {
   .review {
-    width: 360px;
+    max-width: 360px;
+    margin: auto;
   }
   .button_right {
     margin-left: 0px;
