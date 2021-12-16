@@ -117,7 +117,13 @@ const CartContainer = () => {
   )
 
   if (formDelivery === 'submitted') {
-    return <ThankYou text='Ordered successfully!' />
+    return (
+      <section className='cart-container container container-appear-opacity'>
+        <div className='cart_thankyou'>
+          <h3>Ordered successfully!</h3>
+        </div>
+      </section>
+    )
   }
 
   // if (deliveryStatus === 'submitted') {

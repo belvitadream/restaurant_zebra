@@ -24,3 +24,7 @@
 .cart-amount {
   font-size: 1rem;
 }
+
+.cart_thankyou > h3 {
+  text-align: center;
+}

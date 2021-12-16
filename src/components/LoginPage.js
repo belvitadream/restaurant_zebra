@@ -21,6 +21,7 @@ const LoginPage = () => {
         // use logged in
         console.log(authUser)
         setUser(authUser)
+        setShowForm(false)
 
         if (authUser.displayName) {
           // dont update username
@@ -73,7 +74,7 @@ const LoginPage = () => {
 
   const login = (e) => {
     e.preventDefault()
-    if (account.username && account.password) {
+    if (account.email && account.password) {
       const newAccount = {
         ...account,
         id: new Date().getTime().toString(),
@@ -83,11 +84,16 @@ const LoginPage = () => {
 
       setOpenLogin(false)
       setOpenSignUp(false)
+      setShowForm(false)
+
+      auth
+        .signInWithEmailAndPassword(account.email, account.password)
+        .catch((err) => console.log(err.message))
     }
 
-    if (account.username === 'anna' && account.password === 'anna') {
-      setShowForm(false)
-    }
+    // if (account.email === 'anna@gmail.com' && account.password === 'anna') {
+    //   setShowForm(false)
+    // }
   }
 
   return (
@@ -164,12 +170,12 @@ const LoginPage = () => {
           {openLogin && (
             <form className='login-form form'>
               <div className='form-position '>
-                <label htmlFor='username'>username</label>
+                <label htmlFor='email'>email</label>
                 <input
-                  type='text'
-                  name='username'
-                  id='username'
-                  value={account.username}
+                  type='email'
+                  name='email'
+                  id='email'
+                  value={account.email}
                   onChange={(e) => handleChange(e)}
                 />
               </div>
@@ -202,8 +208,21 @@ const LoginPage = () => {
             You are now logged in. <br />
             You can now view Reservations and Deliveries.
           </h4>
-
-          {user && <button onClick={() => auth.signOut()}>Log out</button>}
+          <div>
+            {user ? (
+              <button
+                className='btn'
+                onClick={() => {
+                  auth.signOut()
+                  setShowForm(true)
+                }}
+              >
+                <p> Log out</p>
+              </button>
+            ) : (
+              ''
+            )}
+          </div>
 
           <div className='login-promo_buttons'>
             <Link to='/listofdelivery'>

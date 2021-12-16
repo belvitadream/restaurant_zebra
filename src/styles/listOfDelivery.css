@@ -10,9 +10,18 @@
 .cart_details {
   display: grid;
   grid-template-columns: 300px 70px 70px;
-  grid-template-areas:
-    'header header header'
-    'name amount price';
+  grid-template-areas: 'header header header';
+}
+
+.cart_details_each {
+  display: grid;
+  grid-template-columns: 300px 70px 70px;
+  grid-template-areas: 'header header header';
+}
+
+.cart_details_each > * {
+  padding: 5px;
+  border: 1px solid black;
 }
 
 .cart_details > * {

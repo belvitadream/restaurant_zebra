@@ -37,7 +37,7 @@ function Footer() {
           </ul>
 
           <Link to='/loginpage'>
-            <p>Login as admin</p>
+            <p>Login</p>
           </Link>
         </div>
       </div>
