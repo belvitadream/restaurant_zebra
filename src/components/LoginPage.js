@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const LoginPage = () => {
   const [showForm, setShowForm] = useState(true)
-
+  const [showButtons, setShowButtons] = useState(true)
   const [openSignUp, setOpenSignUp] = useState(false)
   const [openLogin, setOpenLogin] = useState(false)
   const [account, setAccount] = useState({
@@ -82,13 +82,14 @@ const LoginPage = () => {
       setAccount(newAccount)
       console.log(newAccount)
 
-      setOpenLogin(false)
-      setOpenSignUp(false)
-      setShowForm(false)
-
       auth
         .signInWithEmailAndPassword(account.email, account.password)
-        .catch((err) => console.log(err.message))
+        .then(() => {
+          setOpenLogin(false)
+          setOpenSignUp(false)
+          setShowForm(false)
+        })
+        .catch((err) => alert(err.message))
     }
 
     // if (account.email === 'anna@gmail.com' && account.password === 'anna') {
@@ -103,7 +104,6 @@ const LoginPage = () => {
           <h4 className='reviews__title title-styled'>
             Please log in in order to review Reservations and Deliveries
           </h4>
-
           <div className='login-promo_buttons'>
             <button
               className='btn'
@@ -166,7 +166,6 @@ const LoginPage = () => {
               </button>
             </form>
           )}
-
           {openLogin && (
             <form className='login-form form'>
               <div className='form-position '>
