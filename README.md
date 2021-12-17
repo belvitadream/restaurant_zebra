@@ -1,3 +1,9 @@
+Site deployed on https://zebra-project.netlify.app/
+
+npm start in order to run locally
+
+npm run build in order to prepare files ready for deployment.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
