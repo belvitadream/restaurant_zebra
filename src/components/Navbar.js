@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { FaBars } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-// import zebra from '../assets/Zebra.svg'
 import zebra2 from '../assets/zebraFINAL.svg'
 import { links, social } from './data'
 

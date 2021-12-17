@@ -1,11 +1,6 @@
-// import { useRef } from 'react'
 import { food } from '../components/data'
 
 const Menu = () => {
-  // const scroll = (ref) => {
-  //   ref.current.scrollIntoView({ behavior: 'smooth' })
-  // }
-
   return (
     <section>
       <h1 className='menu__title title-styled'>MENU</h1>

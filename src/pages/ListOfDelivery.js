@@ -14,7 +14,7 @@ const ListofDelivery = () => {
   return (
     <section className='reservations-list'>
       {list.map((ele) => {
-        const { id, name, email, phone, cart, total } = ele
+        const { name, email, phone, cart, total } = ele
         return (
           <div
             className='reservations-item'

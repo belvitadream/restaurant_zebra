@@ -15,7 +15,7 @@ const ListOfReservations = () => {
     <section className='reservations-list'>
       {list.map((res) => {
         console.log(res)
-        const { id, name, email, phone, date, time, amount, event } = res
+        const { name, email, phone, date, time, amount, event } = res
         return (
           <div
             className='reservations-item'

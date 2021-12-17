@@ -168,9 +168,7 @@ select {
   display: block;
   border: 1px solid grey;
 }
-.reservations-item button,
-.reservations-item a {
-}
+
 .reservations-item {
   padding: 1rem 2rem;
 }

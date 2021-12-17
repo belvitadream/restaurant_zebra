@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react'
-import ServerView from './ServerView'
-import { db, auth } from '../firebase'
+import { auth } from '../firebase'
 import { Link } from 'react-router-dom'
 
 const LoginPage = () => {
   const [showForm, setShowForm] = useState(true)
-  const [showButtons, setShowButtons] = useState(true)
   const [openSignUp, setOpenSignUp] = useState(false)
   const [openLogin, setOpenLogin] = useState(false)
   const [account, setAccount] = useState({

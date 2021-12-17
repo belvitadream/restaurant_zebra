@@ -1,6 +1,4 @@
 import React, { useContext, useEffect, useReducer } from 'react'
-
-// import { cartItems } from '../components/data'
 import reducer from './reducer'
 
 const AppContext = React.createContext()

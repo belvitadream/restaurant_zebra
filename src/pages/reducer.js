@@ -1,6 +1,3 @@
-// import { act } from 'react-dom/test-utils'
-// import { cartItems } from '../components/data'
-
 const reducer = (state, action) => {
   if (action.type === 'CLEAR_CART') {
     return {
@@ -17,8 +14,6 @@ const reducer = (state, action) => {
   }
 
   if (action.type === 'INCREASE') {
-    // console.log(`increasing ${action.payload}`)
-    // console.log(action.payload)
     let tempCart = state.cart.map((item) => {
       if (item.id === action.payload) {
         return { ...item, amount: item.amount + 1 }

@@ -1,18 +1,12 @@
 import React, { useState } from 'react'
-import ThankYou from '../components/ThankYou'
 import CartItem from '../components/CartItem'
 import { useGlobalContext } from './context'
 import { db } from '../firebase'
 
 const CartContainer = () => {
   const { cart, total, clearCart, amount } = useGlobalContext()
-  // const [deliveryStatus, setdeliveryStatus] = useState('notSubmitted')
   const [formDelivery, setFormDelivery] = useState('notSubmitted')
   const [deliveries, setDeliveries] = useState([])
-
-  // const submitOrder = () => {
-  //   setdeliveryStatus('submitted')
-  // }
 
   const [delivery, setDelivery] = useState({
     name: '',
@@ -126,10 +120,6 @@ const CartContainer = () => {
     )
   }
 
-  // if (deliveryStatus === 'submitted') {
-  //   return <>{formDelivery === 'notSubmitted' && deliveryFormDiv}</>
-  // }
-
   if (cart.length === 0) {
     return (
       <section className='cart-container container container-appear-opacity'>
@@ -166,9 +156,6 @@ const CartContainer = () => {
         </button>
 
         {deliveryFormDiv}
-        {/* <button className='btn btn-order' onClick={submitOrder}>
-          Order
-        </button> */}
       </div>
     </section>
   )

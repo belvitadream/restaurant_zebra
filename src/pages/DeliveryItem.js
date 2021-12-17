@@ -19,21 +19,6 @@ const DeliveryItem = (item) => {
       <p className='menu__name'>{item.name}</p>
       <p className='menu__price'>{item.price}.00$</p>
 
-      {/* <div className='amount_container'>
-        <button className='btn btn-inc' onClick={() => newItem(id)}>
-          <p className='btn-inc'>+</p>
-        </button>
-        <p>{amount}</p>
-        <button
-          className='btn btn-dec'
-          onClick={() => {
-            decrease(id)
-          }}
-        >
-          <p className='btn-dec'>-</p>
-        </button>
-      </div> */}
-
       <button className='btn-add' onClick={() => newItem(item.id)}>
         add
       </button>
